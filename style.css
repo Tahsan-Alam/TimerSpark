@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(270deg, #ff6b6b, #f6d365, #1c92d2, #ff6b6b);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.font {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+#timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 2em;
+}
+
+.styling {
+    font-size: 1em;
+    text-align: center;
+    width: 3em;
+    height: 1.5em;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.btn-1:hover, .btn-2:hover, .sound-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.btn-1:hover {
+    color: rgba(0, 128, 0, 0.7);
+}
+
+.btn-2:hover {
+    color: rgba(255, 0, 0, 0.7);
+}
+
+.active-btn-1 svg {
+    border-radius: 50%;
+    background-color: #c0392b;
+    transform: scale(0.95);
+}
+
+
+svg {
+    height: 2em;
+    width: 2em;
+}
+
+#footer {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+/* after clicking button without setting up time */
+
+.customized-pop-up{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.customized-pop-up aside{
+    
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: solid #ff6b6b
+}
+
+.customized-button{
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color:#ff6b6b;
+}
+
+.customized-button:hover{
+    cursor: pointer;
+  
+}
+
+
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .container {
+        margin-top: 100px;
+    }
+
+    .input {
+        font-size: 3em;
+    }
+
+    .styling {
+        font-size: 1.5em;
+        height: 2em;
+        width: 4em;
+    }
+
+    svg {
+        height: 3em;
+        width: 3em;
+    }
+}
